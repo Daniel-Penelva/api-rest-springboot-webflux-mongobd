@@ -1,6 +1,7 @@
 package com.daniel.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.daniel.daos.ClienteDao;
 import com.daniel.documentos.Cliente;
@@ -8,6 +9,7 @@ import com.daniel.documentos.Cliente;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@Service
 public class ClienteServiceImpl implements ClienteService {
 
 	    @Autowired
@@ -29,7 +31,7 @@ public class ClienteServiceImpl implements ClienteService {
 	    }
 
 	    @Override
-	    public Mono<Void> deleteById(Cliente cliente) {
+	    public Mono<Void> delete(Cliente cliente) {
 	      return clienteDao.delete(cliente);
 	    }
 }

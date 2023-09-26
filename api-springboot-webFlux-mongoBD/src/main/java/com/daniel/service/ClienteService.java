@@ -13,5 +13,5 @@ public interface ClienteService {
 
     public Mono<Cliente> save(Cliente cliente);
 
-    public Mono<Void> deleteById(Cliente cliente);
+    public Mono<Void> delete(Cliente cliente);
 }
